@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grocery Price Tracker</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js"></script>
+
 </head>
 <body>
     <h1>Grocery Price Tracker</h1>
@@ -24,3 +26,6 @@
     <script src="script.js"></script>
 </body>
 </html>
+<input type="file" id="receiptUpload" accept="image/*">
+<button onclick="processReceipt()">Analyze Receipt</button>
+

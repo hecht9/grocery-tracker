@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Price Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Grocery Price Tracker</h1>
+    <form id="groceryForm">
+        <input type="text" id="item" placeholder="Item Name" required>
+        <input type="text" id="store" placeholder="Store Name" required>
+        <input type="number" id="price" placeholder="Price" required>
+        <button type="submit">Add Price</button>
+    </form>
+    <table id="priceTable">
+        <tr>
+            <th>Item</th>
+            <th>Store</th>
+            <th>Price</th>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>

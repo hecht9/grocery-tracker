@@ -78,3 +78,16 @@ function addToTracker(item, store, price) {
     groceries.push({ item, store, price });
     localStorage.setItem("groceries", JSON.stringify(groceries));
 }
+async function addGroceryItem(item, price, store) {
+    const url = "https://script.google.com/macros/s/AKfycbxVC2DP4suuBswdbdKwFC9u-lY45Iz_zb7BKy0oMymsBNUgZAMW-8jKnK3W4huAOLI3/exec";  // Paste your Apps Script Web App URL
+    const data = { item, price, store };
+    
+    const response = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" }
+    });
+
+    const result = await response.text();
+    console.log(result);  // Should print: ✅ Item added!
+}
